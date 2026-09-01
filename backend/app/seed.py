@@ -66,11 +66,9 @@ def run_seed():
             db.add(mgmt)
             print("Created management user.")
         else:
-            mgmt.password_hash = hash_password("password123")
-            mgmt.management_id = "MGMT-ADMIN-01"
-            mgmt.must_change_password = True
-            mgmt.is_active = True
-            mgmt.role = "management"
+            if not mgmt.management_id:
+                mgmt.management_id = "MGMT-ADMIN-01"
+            print("Management user already exists. Preserving credentials.")
 
         # Student User
         student_email = "student@vignex.dev"
@@ -90,13 +88,9 @@ def run_seed():
             db.commit()
             db.refresh(student)
         else:
-            student.password_hash = hash_password("password123")
-            student.roll_number = "221FA04001"
-            student.must_change_password = True
-            student.is_active = True
-            student.role = "student"
-            if student.student_profile:
-                student.student_profile.enrollment_number = "221FA04001"
+            if not student.roll_number:
+                student.roll_number = "221FA04001"
+            print("Student user already exists. Preserving credentials.")
 
         # Faculty User (CSE)
         faculty_email = "faculty@vignex.dev"
@@ -118,15 +112,9 @@ def run_seed():
             db.add(faculty)
             print("Created faculty user.")
         else:
-            faculty.password_hash = hash_password("password123")
-            faculty.faculty_id = "FAC-CSE-001"
-            faculty.must_change_password = True
-            faculty.is_active = True
-            faculty.role = "faculty"
-            if faculty.faculty_profile:
-                faculty.faculty_profile.employee_id = "FAC-CSE-001"
-                if not faculty.faculty_profile.department_id:
-                    faculty.faculty_profile.department_id = cs_dept.id
+            if not faculty.faculty_id:
+                faculty.faculty_id = "FAC-CSE-001"
+            print("Faculty user already exists. Preserving credentials.")
 
         db.commit()
 
