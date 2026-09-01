@@ -1,0 +1,5 @@
+John Doe
+B.Tech in Computer Science & Engineering, Vignan Institute
+Technical Skills: Python, React, FastAPI, SQL, Docker, TypeScript, Linux, Git
+Projects: Built an intelligent campus triage operating system with real-time analytics.
+Certifications: AWS Cloud Certified Practitioner

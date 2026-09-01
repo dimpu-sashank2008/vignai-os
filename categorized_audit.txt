@@ -1,0 +1,564 @@
+
+=========================================
+FRONTEND_UI (55 occurrences)
+=========================================
+[Frontend User-Facing UI] frontend\src\components\common\AIStatusIndicator.tsx:39 ->  label: 'VIGNEX AI ONLINE',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:521 ->  id: 'universal-ask-vignex',
+[Frontend User-Facing UI] frontend\src\components\common\CommandPalette.tsx:522 ->  label: 'Ask VIGNEX — Your AI Campus Assistant',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:526 ->  path: '/ask-vignex',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:527 ->  targetId: 'ask-vignex-console',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:530 ->  'ask vignex', 'ask vignai', 'ask ai', 'ai query', 'natural language search',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:531 ->  'campus qa', 'intelligence assistant', 'ai chat', 'vignex console',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:532 ->  'ai campus assistant', 'vignai', 'vignex assistant', 'campus assistant', 'assistant'
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:646 ->  // Ask VIGNEX role-based navigation
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:647 ->  if (item.id === 'universal-ask-vignex') {
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:648 ->  navigate(`/${userRole}/ask-vignex`, {
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:650 ->  targetId: 'ask-vignex-console',
+[Frontend Component/Logic] frontend\src\components\common\CommandPalette.tsx:653 ->  triggerSpotlight('ask-vignex-console', 3500);
+[Frontend User-Facing UI] frontend\src\components\common\CommandPalette.tsx:794 ->  <span>VIGNEX Deep-Link Function Finder & Spotlight</span>
+[Frontend Component/Logic] frontend\src\components\common\VignexIntroScreen.tsx:4 ->  interface VignexIntroScreenProps {
+[Frontend Component/Logic] frontend\src\components\common\VignexIntroScreen.tsx:9 ->  export const VignexIntroScreen: React.FC<VignexIntroScreenProps> = ({
+[Frontend User-Facing UI] frontend\src\components\common\VignexIntroScreen.tsx:59 ->  aria-label="VIGNEX Launch Sequence"
+[Frontend Component/Logic] frontend\src\components\common\VignexIntroScreen.tsx:136 ->  VIGNEX
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:21 ->  import { AskVignexResponse, AskVignexEvidenceCase } from '../../types';
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:23 ->  interface AskVignexConsoleProps {
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:27 ->  export const AskVignexConsole: React.FC<AskVignexConsoleProps> = ({ onOpenWhyModal }) => {
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:30 ->  const [history, setHistory] = useState<AskVignexResponse[]>([]);
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:49 ->  const res = await client.post<AskVignexResponse>('/intelligence/ask', {
+[Frontend User-Facing UI] frontend\src\components\intelligence\AskVignexConsole.tsx:54 ->  console.error('Ask VIGNEX query failed:', err);
+[Frontend User-Facing UI] frontend\src\components\intelligence\AskVignexConsole.tsx:70 ->  <h3 className="font-bold text-base text-white">Ask VIGNEX Intelligence</h3>
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:155 ->  🏛️ VIGNEX CAMPUS DATA
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:183 ->  {resp.supporting_cases.map((sc: AskVignexEvidenceCase) => (
+[Frontend Component/Logic] frontend\src\components\intelligence\AskVignexConsole.tsx:225 ->  export default AskVignexConsole;
+[Frontend User-Facing UI] frontend\src\components\layout\Sidebar.tsx:38 ->  { to: '/student/ask-vignex', icon: MessageSquare, label: 'Ask VIGNEX' },
+[Frontend User-Facing UI] frontend\src\components\layout\Sidebar.tsx:46 ->  { to: '/faculty/ask-vignex', icon: MessageSquare, label: 'Ask VIGNEX' },
+[Frontend User-Facing UI] frontend\src\components\layout\Sidebar.tsx:55 ->  { to: '/management/ask-vignex', icon: MessageSquare, label: 'Ask VIGNEX' },
+[Frontend User-Facing UI] frontend\src\components\layout\Sidebar.tsx:86 ->  <span className="text-xl font-black tracking-tight text-slate-900 dark:text-white">VIGNEX</span>
+[Frontend User-Facing UI] frontend\src\components\layout\TopNav.tsx:124 ->  <span>Search VIGNEX...</span>
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:31 ->  import { AskVignexAnswerResponse } from '../types';
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:33 ->  export const AskVignexPage: React.FC = () => {
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:38 ->  const [history, setHistory] = useState<AskVignexAnswerResponse[]>([]);
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:47 ->  const targetId = stateTarget || hashTarget || 'ask-vignex-console';
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:106 ->  const res = await client.post<AskVignexAnswerResponse>('/intelligence/ask-vignex', {
+[Frontend User-Facing UI] frontend\src\pages\AskVignexPage.tsx:113 ->  console.error('Ask VIGNEX query failed:', err);
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:127 ->  <div id="ask-vignex-console" className="space-y-6 max-w-5xl mx-auto">
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:143 ->  ASK VIGNEX
+[Frontend User-Facing UI] frontend\src\pages\AskVignexPage.tsx:164 ->  placeholder="Ask VIGNEX about your campus..."
+[Frontend Component/Logic] frontend\src\pages\AskVignexPage.tsx:369 ->  export default AskVignexPage;
+[Frontend Component/Logic] frontend\src\pages\FacultyCaseDetailPage.tsx:298 ->  The student enabled Identity Protection on this case. Their student account is verified by VIGNEX, but their name, email, and student ID are concealed.
+[Frontend User-Facing UI] frontend\src\pages\LoginPage.tsx:58 ->  <h1 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">VIGNEX</h1>
+[Frontend Component/Logic] frontend\src\pages\LoginPage.tsx:119 ->  onClick={() => handleQuickLogin('student@vignex.dev')}
+[Frontend Component/Logic] frontend\src\pages\LoginPage.tsx:127 ->  onClick={() => handleQuickLogin('faculty@vignex.dev')}
+[Frontend Component/Logic] frontend\src\pages\LoginPage.tsx:135 ->  onClick={() => handleQuickLogin('management@vignex.dev')}
+[Frontend Component/Logic] frontend\src\pages\ManagementCaseDetailPage.tsx:272 ->  The student enabled Identity Protection on this case. Their student account is verified by VIGNEX, but their name, email, and student ID are concealed.
+[Frontend User-Facing UI] frontend\src\pages\ManagementDashboard.tsx:170 ->  <p className="text-sm font-medium text-slate-500">Loading VIGNEX AI Intelligence Center...</p>
+[Frontend User-Facing UI] frontend\src\pages\ManagementDashboard.tsx:610 ->  <h3 className="text-base font-bold text-slate-900 dark:text-white">VIGNEX AI ACTIVITY</h3>
+[Frontend Component/Logic] frontend\src\pages\ReportIssuePage.tsx:264 ->  Optional: VIGNEX auto-classifies during triage.
+[Frontend Component/Logic] frontend\src\pages\ReportIssuePage.tsx:392 ->  Your account remains authenticated and verified by VIGNEX, but your name/email will not be shown to the frontline support handler resolving the issue.
+[Frontend Component/Logic] frontend\src\pages\ReportIssuePage.tsx:399 ->  Your account remains verified by VIGNEX, but your identity will not be automatically shown to the person handling this case.
+[Frontend User-Facing UI] frontend\src\pages\StudentProfilePage.tsx:183 ->  VIGNEX Privacy & Identity Protection Guarantee
+
+=========================================
+FRONTEND_META (8 occurrences)
+=========================================
+[Frontend Metadata/Types] frontend\index.html:7 ->  <title>VIGNEX — Campus OS</title>
+[Frontend Metadata/Types] frontend\package.json:2 ->  "name": "vignex-frontend",
+[Frontend Metadata/Types] frontend\src\types\index.ts:318 ->  export interface AskVignexEvidenceCase {
+[Frontend Metadata/Types] frontend\src\types\index.ts:327 ->  export type QueryMode = 'GENERAL_KNOWLEDGE' | 'VIGNEX_DATA' | 'HYBRID';
+[Frontend Metadata/Types] frontend\src\types\index.ts:376 ->  export interface AskVignexActionLink {
+[Frontend Metadata/Types] frontend\src\types\index.ts:382 ->  export interface AskVignexAnswerResponse {
+[Frontend Metadata/Types] frontend\src\types\index.ts:403 ->  action_links: AskVignexActionLink[];
+[Frontend Metadata/Types] frontend\src\types\index.ts:408 ->  export interface AskVignexResponse extends AskVignexAnswerResponse {}
+
+=========================================
+BACKEND_PROMPTS_AND_RESPONSES (152 occurrences)
+=========================================
+[Backend AI Prompt / Grounded Response] backend\app\services\ai\prompts\complaint_analysis.py:2 ->  System prompts and guidance for VIGNEX AI Complaint Analysis & Routing (Phase 3).
+[Backend AI Prompt / Grounded Response] backend\app\services\ai\prompts\complaint_analysis.py:9 ->  VIGNEX_AI_POLICY_VERSION,
+[Backend AI Prompt / Grounded Response] backend\app\services\ai\prompts\complaint_analysis.py:16 ->  COMPLAINT_ANALYSIS_SYSTEM_PROMPT = f"""You are the VIGNEX AI Campus Intelligence Assistant (Policy Version {VIGNEX_AI_POLICY_VERSION}).
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:2 ->  Answer Generation & Grounding Service for Ask VIGNEX (Phase 4C).
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:11 ->  from app.services.ask_vignex.schemas import (
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:12 ->  AskVignexQueryPayload,
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:13 ->  AskVignexAnswerResponse,
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:14 ->  AskVignexActionLink,
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:16 ->  from app.services.ask_vignex.query_router import query_router
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:17 ->  from app.services.ask_vignex.retrieval import retrieval_service
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:21 ->  class AskVignexAnswerService:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:24 ->  def _generate_general_knowledge_response(self, query: str) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:127 ->  "2. **Centralized Issue Tracking**: Utilizing unified operational systems (such as VIGNEX) eliminates redundant technician dispatches and identifies recurring defect hotspots.\n"
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:143 ->  f"**{clean_subject}** is an educational and conceptual topic evaluated under VIGNEX General Knowledge mode.\n\n"
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:153 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:183 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:196 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:199 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:237 ->  AskVignexActionLink(label="View Attendance Details", url="/student/academics", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:269 ->  AskVignexActionLink(label="View Assessment Hub", url="/student/academics", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:300 ->  AskVignexActionLink(label="View Assignment Tracker", url="/student/academics", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:325 ->  AskVignexActionLink(label="View Workload Timeline", url="/student/academics", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:347 ->  AskVignexActionLink(label="View Full Timetable", url="/student/academics", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:350 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:353 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:362 ->  "source": "VIGNEX Academic Database",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:378 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:408 ->  AskVignexActionLink(label="View Academic Intelligence", url="/faculty/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:432 ->  AskVignexActionLink(label="View Class Assignments", url="/faculty/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:457 ->  AskVignexActionLink(label="View Assessment Tracker", url="/faculty/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:487 ->  AskVignexActionLink(label="View Academic Intelligence", url="/faculty/academic-intelligence", action_type="VIEW_ACADEMICS"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:488 ->  AskVignexActionLink(label="View Department Issues", url="/faculty/department-issues", action_type="VIEW_CASES"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:490 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:502 ->  "source": "VIGNEX Unified Academic & Complaint System",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:511 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:514 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:523 ->  "source": "VIGNEX Faculty Academic Database",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:539 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:566 ->  AskVignexActionLink(label="Open Management Academics", url="/management/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:578 ->  f"VIGNEX pattern analysis identified **{len(patterns)} active academic signal(s)**:\n\n"
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:588 ->  AskVignexActionLink(label="View Academic Patterns", url="/management/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:611 ->  AskVignexActionLink(label="View Assignment Analytics", url="/management/academic-intelligence", action_type="VIEW_ACADEMICS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:644 ->  AskVignexActionLink(label="Open Management Academics", url="/management/academic-intelligence", action_type="VIEW_ACADEMICS"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:645 ->  AskVignexActionLink(label="Open Intelligence Center", url="/management", action_type="OPEN_INTELLIGENCE"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:647 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:659 ->  "source": "VIGNEX Unified Institutional Database",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:668 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:671 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:680 ->  "source": "VIGNEX Institutional Academic Database",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:695 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:699 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:702 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:710 ->  provenance={"source": "VIGNEX Simulation Engine", "role_required": "management"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:720 ->  "Calculated deterministically through the VIGNEX What-If Decision Simulation Engine:\n\n"
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:731 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:734 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:746 ->  provenance={"source": "VIGNEX What-If Simulation Engine", "calculation_method": "Deterministic Flow Analysis"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:750 ->  AskVignexActionLink(label="Open What-If Lab", url="/management/simulations", action_type="VIEW_SIMULATIONS")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:760 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:772 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:775 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:777 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:783 ->  provenance={"source": "VIGNEX Complaint Registry"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:798 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:801 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:803 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:809 ->  provenance={"source": "VIGNEX Student Complaint Database"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:813 ->  AskVignexActionLink(label="Report an Issue", url="/student/report", action_type="VIEW_CASES")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:824 ->  f"You have **{len(complaints)} reported case(s)** in the VIGNEX centralized registry:\n\n"
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:827 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:830 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:832 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:841 ->  provenance={"source": "VIGNEX Student Complaint Database", "data_source": "VERIFIED CASE RECORD"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:845 ->  AskVignexActionLink(label="View My Complaints", url="/student/complaints", action_type="VIEW_CASES")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:852 ->  payload: AskVignexQueryPayload,
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:855 ->  ) -> AskVignexAnswerResponse:
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:926 ->  # 3. Deterministic Database Retrieval (Only for VIGNEX_DATA mode)
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:936 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:939 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:941 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:942 ->  answer="I can't provide protected reporter identity. In accordance with VIGNEX policy, reporter identities submitted under protected status are strictly confidential and concealed across all analytical views.",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:950 ->  provenance={"source": "VIGNEX Confidentiality Policy", "protected": True},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:953 ->  "Reporter personal identifying information is restricted under VIGNEX Privacy Policy.",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:962 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:965 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:967 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:968 ->  answer="VIGNEX cannot determine whether an allegation is true. It can show the reported case, available evidence and investigation status to authorized users.",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:977 ->  provenance={"source": "VIGNEX Procedural Neutrality Policy", "status": "Under Review"},
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:984 ->  AskVignexActionLink(label="View Related Cases", url="/management/campus-issues", action_type="VIEW_CASES")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:991 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:994 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:997 ->  answer="I don't have enough verified VIGNEX data to answer that. No active operational records or confirmed pattern clusters match your inquiry within the current monitoring period.",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1011 ->  AskVignexActionLink(label="Open Intelligence Center", url="/management", action_type="OPEN_INTELLIGENCE")
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1028 ->  f"According to the centralized VIGNEX database, **{top_dept}** currently has the most unresolved complaints "
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1047 ->  AskVignexActionLink(label=f"Inspect {top_dept} Issues", url=f"/management/campus-issues?department={top_dept}", action_type="VIEW_CASES"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1048 ->  AskVignexActionLink(label="Open Intelligence Center", url="/management", action_type="OPEN_INTELLIGENCE"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1076 ->  AskVignexActionLink(label=f"View {loc_name} Cases", url=f"/management/campus-issues?location={loc_name}", action_type="VIEW_CASES"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1077 ->  AskVignexActionLink(label="View Intelligence Graph", url="/management", action_type="VIEW_GRAPH"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1085 ->  f"VIGNEX is currently tracking **{retrieval.case_count} complaints** in the **{cat_name}** domain "
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1099 ->  "External city traffic congestion outside campus perimeter cannot be verified directly by VIGNEX.",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1103 ->  AskVignexActionLink(label=f"View {cat_name} Cases", url=f"/management/campus-issues?category={cat_name}", action_type="VIEW_CASES"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1129 ->  AskVignexActionLink(label="Open Emerging Patterns", url="/management", action_type="OPEN_PATTERN"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1136 ->  f"### 🔍 VIGNEX Top Emerging Issues & Operational Overview\n",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1137 ->  f"Based on real-time analysis across **{retrieval.case_count} campus complaint records**, VIGNEX has identified **{pat_count} active operational patterns**:\n",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1161 ->  AskVignexActionLink(label="Open Intelligence Center", url="/management", action_type="OPEN_INTELLIGENCE"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1162 ->  AskVignexActionLink(label="View Campus Issues", url="/management/campus-issues", action_type="VIEW_CASES"),
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1176 ->  return AskVignexAnswerResponse(
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1179 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\answer_service.py:1195 ->  ask_vignex_answer_service = AskVignexAnswerService()
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:2 ->  Intent Classification & Query Routing Layer for Ask VIGNEX (Phase 4C).
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:4 ->  Distinguishes between GENERAL_KNOWLEDGE, VIGNEX_DATA, and HYBRID query modes.
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:10 ->  from app.services.ask_vignex.schemas import IntentClassificationResult
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:16 ->  "campus", "vignex", "our college", "university", "complaint", "complaints",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:79 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:80 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:94 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:95 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:124 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:134 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:135 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:152 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:166 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:167 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:183 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:197 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:211 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:224 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:238 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:268 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:282 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:295 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:327 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:340 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:353 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:440 ->  # 6. VIGNEX CAMPUS DATA INTENT CLASSIFICATION
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:452 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:453 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:469 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:470 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:480 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:481 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:493 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:494 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:508 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:509 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:520 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:521 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:531 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:532 ->  query_mode="VIGNEX_DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:538 ->  # H. If the user mentions "vignex", "campus", "complaints", "students", but not specific entities
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:543 ->  context_badge="🏛️ VIGNEX CAMPUS DATA",
+[Backend AI Prompt / Grounded Response] backend\app\services\ask_vignex\query_router.py:544 ->  query_mode="VIGNEX_DATA",
+
+=========================================
+BACKEND_META_AND_DOCS (37 occurrences)
+=========================================
+[Documentation & App Metadata] README.md:1 ->  # VIGNEX — AI-Native Campus Operating System
+[Documentation & App Metadata] README.md:8 ->  vignex/
+[Documentation & App Metadata] README.md:36 ->  cd vignex/backend
+[Documentation & App Metadata] README.md:58 ->  cd vignex/frontend
+[Documentation & App Metadata] README.md:70 ->  | Student    | `student@vignex.dev`    | `password123` | `/student`    |
+[Documentation & App Metadata] README.md:71 ->  | Faculty    | `faculty@vignex.dev`    | `password123` | `/faculty`    |
+[Documentation & App Metadata] README.md:72 ->  | Management | `management@vignex.dev` | `password123` | `/management` |
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:1 ->  # VIGNEX PROJECT CONTEXT
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:5 ->  VIGNEX is an AI-Native Campus Operating System.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:10 ->  VIGNEX is being developed as a standalone software product first.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:17 ->  VIGNEX has three core authenticated roles with isolated permissions and dedicated workspaces:
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:20 ->  - Email: `student@vignex.dev`
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:26 ->  - Email: `faculty@vignex.dev`
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:32 ->  - Email: `management@vignex.dev`
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:35 ->  - Workspace: Campus Issues console, clustered case groups, AI Intelligence Center (KPIs, active patterns, AI priorities, domain health, trend analytics, activity stream), Intelligence Knowledge Graph, Explainability ("Why this insight?"), Ask VIGNEX natural language console, What-If Simulation Lab.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:43 ->  - **Database:** SQLite development database (`backend/vignex.db`) with deterministic backend path resolution (`get_database_url()`).
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:71 ->  - **Ask VIGNEX Privacy Refusal:** Queries inquiring about student identity (e.g., *"Who submitted case VX-123456?"*) trigger an immediate `PRIVACY_REFUSAL` short-circuit without querying or exposing database identity fields.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:206 ->  # ASK VIGNEX INTELLIGENCE CONSOLE
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:208 ->  Implemented in `backend/app/services/ask_vignex/`:
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:211 ->  2. `VIGNEX_DATA`: Handles campus operational queries (e.g., *"What are the biggest problems on campus?"*, *"Why is Block A becoming a risk?"*, *"How many transport cases are unresolved?"*). Deterministically retrieves verified SQLite records and grounds responses strictly in campus data.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:216 ->  - **UI Mode Badges:** Visual indicators (`VIGNEX Campus Intelligence` vs `General Knowledge Q&A`) inform the user of the active mode.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:249 ->  - Theme preference persists in `localStorage` (`vignex_theme`).
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:262 ->  - **Phase 4C — Ask VIGNEX:** Intent routing, verified context retrieval, grounded Q&A, safety short-circuits.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:264 ->  - **Phase 4E / Polish — Intelligence Correction:** Dual query modes (`GENERAL_KNOWLEDGE` vs `VIGNEX_DATA`), `RelatedCaseGroup` non-destructive clustering, deterministic priority sorting, UI mode badges.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:270 ->  - Frontend: `ThemeContext.tsx` with localStorage persistence (`vignex_theme`), `light`/`dark`/`system` modes, OS-level media query listening.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:285 ->  - Ask VIGNEX Integration: Added student academic intents (`STUDENT_ATTENDANCE`, `STUDENT_ASSESSMENTS`, `STUDENT_ASSIGNMENTS`, `STUDENT_WORKLOAD`, `STUDENT_SCHEDULE`) with user-isolated data retrieval and strict domain separation from complaints and general knowledge.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:290 ->  - Backend: Faculty Ask VIGNEX intents (`FACULTY_CLASS_ATTENDANCE`, `FACULTY_ASSIGNMENT_BACKLOG`, `FACULTY_UPCOMING_ASSESSMENTS`, `FACULTY_HYBRID_COMPLAINTS`) in `query_router.py` & `answer_service.py`.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:296 ->  - **Phase 6E — Ask VIGNEX Academic + Cross-Domain Integration:**
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:305 ->  - Context Badges: Distinct badges (`📖 GENERAL KNOWLEDGE`, `📚 ACADEMIC`, `🏛️ VIGNEX CAMPUS DATA`, `🛠️ SIMULATION`, `⚡ HYBRID`) rendered dynamically in Ask VIGNEX UI.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:315 ->  1. Student logs in (`student@vignex.dev`), submits an issue with evidence and identity protection.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:316 ->  2. Faculty logs in (`faculty@vignex.dev`), inspects department cluster, investigates, adds note, updates status.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:317 ->  3. Management logs in (`management@vignex.dev`), inspects Intelligence Center, runs What-If simulation, explores Graph, queries Ask VIGNEX.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:327 ->  - `tests/test_intelligence_correction.py` (8 tests): Ask VIGNEX query modes, Block A grouping, priority sorting, tie-breaking hierarchy.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:329 ->  - `tests/test_academic_6b_student.py` (9 tests): Student Ask VIGNEX intents, domain isolation, deterministic workload window calculations, Responsible-AI neutrality.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:330 ->  - `tests/test_academic_6c_faculty.py` (11 tests): Class-level overview authorization, 403 rejection on unauthorized classes, student access denial, deterministic attendance/assignment/assessment math, AI schema and non-punitive language, and faculty Ask VIGNEX & hybrid intents.
+[Documentation & App Metadata] VIGNEX_PROJECT_CONTEXT.md:331 ->  - `tests/test_academic_6d_management.py` (10 tests): Management aggregate access, role rejection for student/faculty (403), deterministic health status, department breakdown metrics, AI schema and non-punitive checks, and management Ask VIGNEX intents.
+[Documentation & App Metadata] backend\app\main.py:12 ->  title="VIGNEX API",
+
+=========================================
+BACKEND_TESTS (134 occurrences)
+=========================================
+[Test Suite] backend\tests\test_academic_6a.py:31 ->  return get_auth_token(client, "student@vignex.dev", "student")
+[Test Suite] backend\tests\test_academic_6a.py:36 ->  return get_auth_token(client, "faculty@vignex.dev", "faculty")
+[Test Suite] backend\tests\test_academic_6a.py:41 ->  return get_auth_token(client, "management@vignex.dev", "management")
+[Test Suite] backend\tests\test_academic_6a.py:226 ->  assert "student@vignex.dev" not in data_str
+[Test Suite] backend\tests\test_academic_6b_student.py:2 ->  Tests for Phase 6B: Student Academic Intelligence & Ask VIGNEX Integration.
+[Test Suite] backend\tests\test_academic_6b_student.py:26 ->  return get_auth_token(client, "student@vignex.dev")
+[Test Suite] backend\tests\test_academic_6b_student.py:31 ->  return get_auth_token(client, "management@vignex.dev")
+[Test Suite] backend\tests\test_academic_6b_student.py:35 ->  # 1. STUDENT ASK VIGNEX ACADEMIC INTENTS
+[Test Suite] backend\tests\test_academic_6b_student.py:38 ->  def test_ask_vignex_student_attendance_intent(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:48 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6b_student.py:54 ->  def test_ask_vignex_student_assessments_intent(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:64 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6b_student.py:68 ->  def test_ask_vignex_student_assignments_intent(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:78 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6b_student.py:82 ->  def test_ask_vignex_student_workload_intent(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:92 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6b_student.py:96 ->  def test_ask_vignex_student_schedule_intent(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:106 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6b_student.py:114 ->  def test_ask_vignex_general_knowledge_remains_isolated(client, student_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:132 ->  def test_ask_vignex_campus_complaint_query_isolation(client, management_token):
+[Test Suite] backend\tests\test_academic_6b_student.py:136 ->  "/api/management/ask-vignex",
+[Test Suite] backend\tests\test_academic_6b_student.py:142 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6c_faculty.py:4 ->  AI insight schema, Responsible-AI safeguards, and Faculty Ask VIGNEX queries.
+[Test Suite] backend\tests\test_academic_6c_faculty.py:27 ->  return get_auth_token(client, "faculty@vignex.dev")
+[Test Suite] backend\tests\test_academic_6c_faculty.py:32 ->  return get_auth_token(client, "student@vignex.dev")
+[Test Suite] backend\tests\test_academic_6c_faculty.py:37 ->  return get_auth_token(client, "management@vignex.dev")
+[Test Suite] backend\tests\test_academic_6c_faculty.py:154 ->  # 4. FACULTY ASK VIGNEX INTENT TESTS
+[Test Suite] backend\tests\test_academic_6c_faculty.py:157 ->  def test_ask_vignex_faculty_attendance_trend_intent(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6c_faculty.py:167 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6c_faculty.py:171 ->  def test_ask_vignex_faculty_assignment_backlog_intent(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6c_faculty.py:181 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6c_faculty.py:185 ->  def test_ask_vignex_faculty_upcoming_assessments_intent(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6c_faculty.py:195 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6c_faculty.py:199 ->  def test_ask_vignex_faculty_hybrid_complaints_query(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6d_management.py:5 ->  Responsible-AI safeguards, and Management Ask VIGNEX integration (including cross-domain hybrid queries).
+[Test Suite] backend\tests\test_academic_6d_management.py:27 ->  return get_auth_token(client, "management@vignex.dev")
+[Test Suite] backend\tests\test_academic_6d_management.py:32 ->  return get_auth_token(client, "faculty@vignex.dev")
+[Test Suite] backend\tests\test_academic_6d_management.py:37 ->  return get_auth_token(client, "student@vignex.dev")
+[Test Suite] backend\tests\test_academic_6d_management.py:154 ->  # 4. MANAGEMENT ASK VIGNEX INTENT TESTS
+[Test Suite] backend\tests\test_academic_6d_management.py:157 ->  def test_ask_vignex_management_department_attendance_intent(client, management_token):
+[Test Suite] backend\tests\test_academic_6d_management.py:167 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6d_management.py:171 ->  def test_ask_vignex_management_academic_patterns_intent(client, management_token):
+[Test Suite] backend\tests\test_academic_6d_management.py:181 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6d_management.py:185 ->  def test_ask_vignex_management_assignment_trends_intent(client, management_token):
+[Test Suite] backend\tests\test_academic_6d_management.py:195 ->  assert data["query_mode"] == "VIGNEX_DATA"
+[Test Suite] backend\tests\test_academic_6d_management.py:199 ->  def test_ask_vignex_management_hybrid_complaints_query(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:2 ->  Tests for Phase 6E: Ask VIGNEX Academic + Cross-Domain Integration.
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:30 ->  return get_auth_token(client, "management@vignex.dev")
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:35 ->  return get_auth_token(client, "faculty@vignex.dev")
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:40 ->  return get_auth_token(client, "student@vignex.dev")
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:47 ->  def test_ask_vignex_photosynthesis_general_knowledge_isolation(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:50 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:64 ->  def test_ask_vignex_recursion_in_c_general_knowledge(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:67 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:82 ->  def test_ask_vignex_student_next_exam_academic_domain(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:85 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:96 ->  def test_ask_vignex_student_attendance_academic_domain(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:99 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:110 ->  def test_ask_vignex_student_assignments_due_academic_domain(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:113 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:128 ->  def test_ask_vignex_student_own_complaints(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:131 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:138 ->  assert "🏛️ VIGNEX CAMPUS DATA" in data["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:142 ->  def test_ask_vignex_unresolved_department_complaints(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:145 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:152 ->  assert "🏛️ VIGNEX CAMPUS DATA" in data["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:160 ->  def test_ask_vignex_block_a_risk_campus_intelligence(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:163 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:170 ->  assert "🏛️ VIGNEX CAMPUS DATA" in data["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:174 ->  def test_ask_vignex_biggest_campus_problems_intelligence(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:177 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:184 ->  assert "🏛️ VIGNEX CAMPUS DATA" in data["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:191 ->  def test_ask_vignex_management_simulation_what_if(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:194 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:206 ->  def test_ask_vignex_student_simulation_access_restricted(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:209 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:223 ->  def test_ask_vignex_hybrid_academic_and_complaint_correlation(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:226 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:244 ->  def test_ask_vignex_protected_identity_refusal(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:247 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:257 ->  def test_ask_vignex_allegation_neutrality(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:260 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:274 ->  def test_ask_vignex_dynamic_domain_switching(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:279 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:288 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:300 ->  "/api/intelligence/ask-vignex",
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:315 ->  def test_universal_ask_vignex_student_queries(client, student_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:319 ->  r1 = client.post("/api/intelligence/ask-vignex", json={"query": "What is photosynthesis?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:327 ->  r2 = client.post("/api/intelligence/ask-vignex", json={"query": "What is my attendance?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:335 ->  r3 = client.post("/api/intelligence/ask-vignex", json={"query": "What are my complaints?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:339 ->  assert "🏛️ VIGNEX CAMPUS DATA" in d3["context_badge"] or "🏛️ VIGNAN CAMPUS DATA" in d3["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:342 ->  r4 = client.post("/api/intelligence/ask-vignex", json={"query": "What are the biggest problems on campus?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:346 ->  assert "🏛️ VIGNEX CAMPUS DATA" in d4["context_badge"] or "🏛️ VIGNAN CAMPUS DATA" in d4["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:349 ->  def test_universal_ask_vignex_faculty_queries(client, faculty_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:353 ->  r1 = client.post("/api/intelligence/ask-vignex", json={"query": "What is recursion?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:361 ->  r2 = client.post("/api/intelligence/ask-vignex", json={"query": "What is the attendance trend in my class?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:368 ->  r3 = client.post("/api/intelligence/ask-vignex", json={"query": "What are the department issues?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:372 ->  assert "🏛️ VIGNEX CAMPUS DATA" in d3["context_badge"] or "🏛️ VIGNAN CAMPUS DATA" in d3["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:375 ->  def test_universal_ask_vignex_management_queries(client, management_token):
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:379 ->  r1 = client.post("/api/intelligence/ask-vignex", json={"query": "What are the biggest campus problems?"}, headers=headers)
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:383 ->  assert "🏛️ VIGNEX CAMPUS DATA" in d1["context_badge"] or "🏛️ VIGNAN CAMPUS DATA" in d1["context_badge"]
+[Test Suite] backend\tests\test_academic_6e_cross_domain.py:386 ->  r2 = client.post("/api/intelligence/ask-vignex", json={"query": "What is the attendance trend across departments?"}, headers=headers)
+[Test Suite] backend\tests\test_architecture_hardening.py:2 ->  Comprehensive Regression Test Suite for VIGNEX Architecture Hardening:
+[Test Suite] backend\tests\test_architecture_hardening.py:42 ->  student = User(id=1, email="student@vignex.dev", password_hash="mock_hash", role="student", is_active=True)
+[Test Suite] backend\tests\test_architecture_hardening.py:43 ->  faculty_user = User(id=2, email="faculty@vignex.dev", password_hash="mock_hash", role="faculty", is_active=True)
+[Test Suite] backend\tests\test_architecture_hardening.py:44 ->  mgmt_user = User(id=3, email="mgmt@vignex.dev", password_hash="mock_hash", role="management", is_active=True)
+[Test Suite] backend\tests\test_auth_endpoints.py:3 ->  student@vignex.dev / password123
+[Test Suite] backend\tests\test_auth_endpoints.py:4 ->  faculty@vignex.dev / password123
+[Test Suite] backend\tests\test_auth_endpoints.py:5 ->  management@vignex.dev / password123
+[Test Suite] backend\tests\test_auth_endpoints.py:18 ->  ("student@vignex.dev", "password123", "student"),
+[Test Suite] backend\tests\test_auth_endpoints.py:19 ->  ("faculty@vignex.dev", "password123", "faculty"),
+[Test Suite] backend\tests\test_auth_endpoints.py:20 ->  ("management@vignex.dev", "password123", "management"),
+[Test Suite] backend\tests\test_auth_endpoints.py:61 ->  resp = client.post("/api/auth/login", json={"email": "student@vignex.dev", "password": "wrongpassword"})
+[Test Suite] backend\tests\test_intelligence_correction.py:2 ->  Comprehensive automated tests for VIGNEX Intelligence Correction:
+[Test Suite] backend\tests\test_intelligence_correction.py:3 ->  1. Ask VIGNEX Intent Safety & Query Mode Separation (General Knowledge vs Campus Data)
+[Test Suite] backend\tests\test_intelligence_correction.py:21 ->  from app.services.ask_vignex.query_router import query_router
+[Test Suite] backend\tests\test_intelligence_correction.py:22 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Test Suite] backend\tests\test_intelligence_correction.py:23 ->  from app.services.ask_vignex.schemas import AskVignexQueryPayload
+[Test Suite] backend\tests\test_intelligence_correction.py:51 ->  # TEST SUITE 1: ASK VIGNEX INTENT SAFETY & QUERY MODES
+[Test Suite] backend\tests\test_intelligence_correction.py:54 ->  def test_ask_vignex_general_knowledge_photosynthesis(db_session):
+[Test Suite] backend\tests\test_intelligence_correction.py:57 ->  payload = AskVignexQueryPayload(query=query)
+[Test Suite] backend\tests\test_intelligence_correction.py:65 ->  resp = ask_vignex_answer_service.process_query(payload=payload, db=db_session)
+[Test Suite] backend\tests\test_intelligence_correction.py:73 ->  def test_ask_vignex_general_knowledge_recursion(db_session):
+[Test Suite] backend\tests\test_intelligence_correction.py:76 ->  payload = AskVignexQueryPayload(query=query)
+[Test Suite] backend\tests\test_intelligence_correction.py:81 ->  resp = ask_vignex_answer_service.process_query(payload=payload, db=db_session)
+[Test Suite] backend\tests\test_intelligence_correction.py:87 ->  def test_ask_vignex_general_knowledge_wifi(db_session):
+[Test Suite] backend\tests\test_intelligence_correction.py:90 ->  payload = AskVignexQueryPayload(query=query)
+[Test Suite] backend\tests\test_intelligence_correction.py:95 ->  resp = ask_vignex_answer_service.process_query(payload=payload, db=db_session)
+[Test Suite] backend\tests\test_intelligence_correction.py:101 ->  def test_ask_vignex_general_knowledge_maintenance_costs(db_session):
+[Test Suite] backend\tests\test_intelligence_correction.py:104 ->  payload = AskVignexQueryPayload(query=query)
+[Test Suite] backend\tests\test_intelligence_correction.py:109 ->  resp = ask_vignex_answer_service.process_query(payload=payload, db=db_session)
+[Test Suite] backend\tests\test_intelligence_correction.py:114 ->  def test_ask_vignex_campus_data_mode(db_session):
+[Test Suite] backend\tests\test_intelligence_correction.py:115 ->  """Campus specific queries must route to VIGNEX_DATA mode."""
+[Test Suite] backend\tests\test_intelligence_correction.py:125 ->  assert intent_res.query_mode == "VIGNEX_DATA", f"Query failed VIGNEX_DATA classification: {q}"
+
+=========================================
+INTERNAL_TECHNICAL (154 occurrences)
+=========================================
+[Internal / Technical Identifier] backend\.env:1 ->  SECRET_KEY=vignex-dev-secret-key-change-in-production
+[Internal / Technical Identifier] backend\.env:2 ->  DATABASE_URL=sqlite:///./vignex.db
+[Internal / Technical Identifier] backend\.env.example:2 ->  DATABASE_URL=sqlite:///./vignex.db
+[Internal / Technical Identifier] backend\app\seed.py:56 ->  mgmt_email = "management@vignex.dev"
+[Internal / Technical Identifier] backend\app\seed.py:73 ->  student_email = "student@vignex.dev"
+[Internal / Technical Identifier] backend\app\seed.py:93 ->  faculty_email = "faculty@vignex.dev"
+[Internal / Technical Identifier] backend\app\config\categories.py:2 ->  Centralized Category Taxonomy Configuration for VIGNEX (Phase 5).
+[Internal / Technical Identifier] backend\app\config\__init__.py:12 ->  SECRET_KEY: str = 'vignex-super-secret-production-key-for-auth-2026'
+[Internal / Technical Identifier] backend\app\config\__init__.py:13 ->  DATABASE_URL: str = 'sqlite:///./vignex.db'
+[Internal / Technical Identifier] backend\app\routers\academics.py:116 ->  def ask_student_academic_vignex(
+[Internal / Technical Identifier] backend\app\routers\academics.py:121 ->  """Natural language Ask VIGNEX queries grounded strictly in authenticated student's academic records."""
+[Internal / Technical Identifier] backend\app\routers\academics.py:122 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Internal / Technical Identifier] backend\app\routers\academics.py:123 ->  from app.services.ask_vignex.schemas import AskVignexQueryPayload
+[Internal / Technical Identifier] backend\app\routers\academics.py:124 ->  query_payload = AskVignexQueryPayload(**payload)
+[Internal / Technical Identifier] backend\app\routers\academics.py:125 ->  return ask_vignex_answer_service.process_query(
+[Internal / Technical Identifier] backend\app\routers\academics.py:238 ->  def ask_faculty_academic_vignex(
+[Internal / Technical Identifier] backend\app\routers\academics.py:243 ->  """Natural language Ask VIGNEX queries grounded strictly in authorized faculty courses."""
+[Internal / Technical Identifier] backend\app\routers\academics.py:244 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Internal / Technical Identifier] backend\app\routers\academics.py:245 ->  from app.services.ask_vignex.schemas import AskVignexQueryPayload
+[Internal / Technical Identifier] backend\app\routers\academics.py:246 ->  query_payload = AskVignexQueryPayload(**payload)
+[Internal / Technical Identifier] backend\app\routers\academics.py:247 ->  return ask_vignex_answer_service.process_query(
+[Internal / Technical Identifier] backend\app\routers\academics.py:307 ->  def ask_management_academic_vignex(
+[Internal / Technical Identifier] backend\app\routers\academics.py:312 ->  """Management Ask VIGNEX academic queries grounded in verified institutional records."""
+[Internal / Technical Identifier] backend\app\routers\academics.py:313 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Internal / Technical Identifier] backend\app\routers\academics.py:314 ->  from app.services.ask_vignex.schemas import AskVignexQueryPayload
+[Internal / Technical Identifier] backend\app\routers\academics.py:315 ->  query_payload = AskVignexQueryPayload(**payload)
+[Internal / Technical Identifier] backend\app\routers\academics.py:316 ->  return ask_vignex_answer_service.process_query(
+[Internal / Technical Identifier] backend\app\routers\health.py:27 ->  "system_identity": "VIGNEX AI-Native Campus OS",
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:19 ->  from app.services.ask_vignex.schemas import (
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:20 ->  AskVignexQueryPayload,
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:21 ->  AskVignexAnswerResponse,
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:27 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:150 ->  # Phase 4C Endpoint: Ask VIGNEX Natural Language Q&A
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:151 ->  @router.post("/ask", response_model=AskVignexAnswerResponse)
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:152 ->  @router.post("/ask-vignex", response_model=AskVignexAnswerResponse)
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:153 ->  async def ask_vignex(
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:154 ->  payload: AskVignexQueryPayload,
+[Internal / Technical Identifier] backend\app\routers\intelligence.py:159 ->  return ask_vignex_answer_service.process_query(
+[Internal / Technical Identifier] backend\app\routers\management.py:19 ->  from app.services.ask_vignex.schemas import AskVignexQueryPayload, AskVignexAnswerResponse
+[Internal / Technical Identifier] backend\app\routers\management.py:322 ->  @router.post("/ask-vignex", response_model=AskVignexAnswerResponse)
+[Internal / Technical Identifier] backend\app\routers\management.py:323 ->  async def ask_vignex_direct(
+[Internal / Technical Identifier] backend\app\routers\management.py:324 ->  payload: AskVignexQueryPayload,
+[Internal / Technical Identifier] backend\app\routers\management.py:329 ->  from app.services.ask_vignex.answer_service import ask_vignex_answer_service
+[Internal / Technical Identifier] backend\app\routers\management.py:330 ->  return ask_vignex_answer_service.process_query(
+[Internal / Technical Identifier] backend\app\schemas\intelligence.py:112 ->  # Phase 4C: Ask VIGNEX Schemas
+[Internal / Technical Identifier] backend\app\schemas\intelligence.py:113 ->  class AskVignexPayload(BaseModel):
+[Internal / Technical Identifier] backend\app\schemas\intelligence.py:117 ->  class AskVignexEvidenceCase(BaseModel):
+[Internal / Technical Identifier] backend\app\schemas\intelligence.py:125 ->  class AskVignexResponse(BaseModel):
+[Internal / Technical Identifier] backend\app\schemas\intelligence.py:129 ->  supporting_cases: list[AskVignexEvidenceCase]
+[Internal / Technical Identifier] backend\app\services\complaint_service.py:39 ->  """Generate a unique VIGNEX case identifier in format VX-XXXXXX."""
+[Internal / Technical Identifier] backend\app\services\ai\complaint_ai.py:2 ->  Complaint AI Analysis Orchestration Service for VIGNEX (Phase 3).
+[Internal / Technical Identifier] backend\app\services\ai\duplicate_detection.py:2 ->  Semantic similarity and potential duplicate detection service for VIGNEX.
+[Internal / Technical Identifier] backend\app\services\ai\provider.py:2 ->  AI Provider abstraction layer for VIGNEX Complaint Intelligence (Phase 3).
+[Internal / Technical Identifier] backend\app\services\ai\provider.py:57 ->  Serves as safe offline fallback and benchmark engine adhering strictly to VIGNEX AI Policy.
+[Internal / Technical Identifier] backend\app\services\ai\provider.py:64 ->  return "vignex-nlp-rules-v2"
+[Internal / Technical Identifier] backend\app\services\ai\examples\dataset.py:2 ->  Synthetic Benchmark Dataset for VIGNEX AI Policy & Routing Evaluation.
+[Internal / Technical Identifier] backend\app\services\ai\policy\evaluation.py:8 ->  VIGNEX_AI_POLICY_VERSION,
+[Internal / Technical Identifier] backend\app\services\ai\policy\evaluation.py:17 ->  print(f"VIGNEX AI POLICY EVALUATION (Policy Version: {VIGNEX_AI_POLICY_VERSION})")
+[Internal / Technical Identifier] backend\app\services\ai\policy\rules.py:2 ->  VIGNEX AI Policy & Behavioral Governance System (Version 1.0)
+[Internal / Technical Identifier] backend\app\services\ai\policy\rules.py:12 ->  VIGNEX_AI_POLICY_VERSION = "1.0"
+[Internal / Technical Identifier] backend\app\services\ai\policy\__init__.py:2 ->  VIGNEX_AI_POLICY_VERSION,
+[Internal / Technical Identifier] backend\app\services\ai\policy\__init__.py:10 ->  "VIGNEX_AI_POLICY_VERSION",
+[Internal / Technical Identifier] backend\app\services\ask_vignex\retrieval.py:2 ->  Deterministic Database Retrieval Layer for Ask VIGNEX (Phase 4C).
+[Internal / Technical Identifier] backend\app\services\ask_vignex\retrieval.py:12 ->  from app.services.ask_vignex.schemas import (
+[Internal / Technical Identifier] backend\app\services\ask_vignex\retrieval.py:19 ->  class AskVignexRetrievalService:
+[Internal / Technical Identifier] backend\app\services\ask_vignex\retrieval.py:327 ->  retrieval_service = AskVignexRetrievalService()
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:2 ->  Pydantic Schemas for Ask VIGNEX Data-Grounded Campus AI Engine (Phase 4C).
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:9 ->  class AskVignexQueryPayload(BaseModel):
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:16 ->  query_mode: str = "VIGNEX_DATA"  # GENERAL_KNOWLEDGE, VIGNEX_DATA, HYBRID
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:18 ->  context_badge: str = "🏛️ VIGNEX CAMPUS DATA"
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:42 ->  class AskVignexActionLink(BaseModel):
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:47 ->  class AskVignexAnswerResponse(BaseModel):
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:50 ->  query_mode: str = "VIGNEX_DATA"  # GENERAL_KNOWLEDGE, VIGNEX_DATA, HYBRID
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:52 ->  context_badge: str = "🏛️ VIGNEX CAMPUS DATA"  # 📖 GENERAL KNOWLEDGE, 📚 ACADEMIC, 🏛️ VIGNEX CAMPUS DATA, 🛠️ SIMULATION, ⚡ HYBRID
+[Internal / Technical Identifier] backend\app\services\ask_vignex\schemas.py:61 ->  action_links: list[AskVignexActionLink] = Field(default_factory=list)
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:2 ->  Ask VIGNEX Natural Language Intelligence Engine (Phase 4C).
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:14 ->  AskVignexResponse,
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:15 ->  AskVignexEvidenceCase,
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:21 ->  class AskVignexService:
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:24 ->  def answer_query(self, query: str, db: Session) -> AskVignexResponse:
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:31 ->  supporting_cases: list[AskVignexEvidenceCase] = []
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:41 ->  "### 🔍 VIGNEX Detected Emerging Issues\n",
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:42 ->  f"Based on real-time clustering across **{len(all_complaints)} campus complaints**, VIGNEX has identified **{len(patterns)} active operational patterns** requiring administrative oversight:\n",
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:63 ->  AskVignexEvidenceCase(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:78 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:124 ->  f"VIGNEX records show **{len(matched_cases)} complaints** associated with **{loc_title}**:\n",
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:144 ->  AskVignexEvidenceCase(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:158 ->  answer = f"No active complaints or defect patterns are currently logged for **{matched_loc_key.title()}** in the VIGNEX database."
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:160 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:201 ->  f"VIGNEX has tracked **{len(matched_cases)} total complaints** under **{matched_cat_key}** (*{open_count} open, {resolved_count} resolved*):\n",
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:209 ->  AskVignexEvidenceCase(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:220 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:255 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:273 ->  "### ⏱️ Recent VIGNEX Campus Activity\n",
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:281 ->  AskVignexEvidenceCase(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:292 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:306 ->  "I don't have enough verified VIGNEX data to answer that query. "
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:308 ->  "and detected operational patterns from the centralized VIGNEX database. "
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:313 ->  return AskVignexResponse(
+[Internal / Technical Identifier] backend\app\services\intelligence\ask_vignex.py:324 ->  ask_vignex_service = AskVignexService()
+[Internal / Technical Identifier] backend\app\services\intelligence\explainability_service.py:2 ->  Explainability Service for VIGNEX Intelligence (Phase 4B).
+[Internal / Technical Identifier] backend\app\services\intelligence\faculty_intelligence.py:2 ->  Faculty Feedback & Concern Intelligence Service for VIGNEX (Phase 5).
+[Internal / Technical Identifier] backend\app\services\intelligence\graph_service.py:2 ->  Knowledge Graph Construction Service for VIGNEX (Phase 4B).
+[Internal / Technical Identifier] backend\app\services\intelligence\grouping_service.py:2 ->  Related Case Grouping Service for VIGNEX (Phase 4 / Intelligence Correction).
+[Internal / Technical Identifier] backend\app\services\intelligence\pattern_detection.py:2 ->  Emerging Pattern Detection Service for VIGNEX (Phase 4A).
+[Internal / Technical Identifier] backend\app\services\intelligence\simulation_engine.py:2 ->  What-If Lab Deterministic Simulation Engine for VIGNEX (Phase 4D).
+[Internal / Technical Identifier] backend\app\services\intelligence\sorting_utils.py:2 ->  Deterministic Priority Sorting and Tie-Breaking Utilities for VIGNEX.
+[Internal / Technical Identifier] backend\app\services\routing\routing_policy.py:2 ->  Deterministic Routing Policy Engine for VIGNEX (Phase 3).
+[Internal / Technical Identifier] backend\app\services\routing\routing_service.py:2 ->  Routing Orchestrator Service for VIGNEX (Phase 3).
+[Internal / Technical Identifier] backend\app\services\simulation\engine.py:2 ->  What-If Lab Decision Simulation Engine for VIGNEX (Phase 4D).
+[Internal / Technical Identifier] backend\app\services\simulation\engine.py:96 ->  data_sources=["VIGNEX Transport Complaint Logs", "Fleet Schedule Baseline (Synthetic Prototype)"],
+[Internal / Technical Identifier] backend\app\services\simulation\engine.py:164 ->  data_sources=["VIGNEX Wi-Fi Issue Records", "Block A Wireless Telemetry Baseline"],
+[Internal / Technical Identifier] backend\app\services\simulation\engine.py:229 ->  data_sources=["VIGNEX Centralized Maintenance Database"],
+[Internal / Technical Identifier] backend\app\services\simulation\schemas.py:2 ->  Pydantic Schemas for VIGNEX What-If Lab Decision Simulation Engine (Phase 4D).
+[Internal / Technical Identifier] frontend\package-lock.json:2 ->  "name": "vignex-frontend",
+[Internal / Technical Identifier] frontend\package-lock.json:8 ->  "name": "vignex-frontend",
+[Internal / Technical Identifier] frontend\tsconfig.tsbuildinfo:1 ->  {"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/api/client.ts","./src/auth/authcontext.tsx","./src/auth/protectedroute.tsx","./src/components/common/aiinsightcard.tsx","./src/components/common/aistatusindicator.tsx","./src/components/common/appearancesettings.tsx","./src/components/common/commandpalette.tsx","./src/components/common/vignexintroscreen.tsx","./src/components/intelligence/askvignexconsole.tsx","./src/components/intelligence/intelligencegraph.tsx","./src/components/intelligence/whyinsightmodal.tsx","./src/components/layout/dashboardlayout.tsx","./src/components/layout/sidebar.tsx","./src/components/layout/topnav.tsx","./src/components/ui/badge.tsx","./src/components/ui/button.tsx","./src/components/ui/card.tsx","./src/components/ui/input.tsx","./src/components/ui/modal.tsx","./src/components/ui/statusbadge.tsx","./src/context/themecontext.tsx","./src/pages/askvignexpage.tsx","./src/pages/casedetailpage.tsx","./src/pages/facultyacademicpage.tsx","./src/pages/facultycasedetailpage.tsx","./src/pages/facultycasespage.tsx","./src/pages/facultydashboard.tsx","./src/pages/facultydepartmentissuespage.tsx","./src/pages/facultyfeedbackpage.tsx","./src/pages/loginpage.tsx","./src/pages/managementacademicpage.tsx","./src/pages/managementcampusissuespage.tsx","./src/pages/managementcasedetailpage.tsx","./src/pages/managementdashboard.tsx","./src/pages/managementsimulationspage.tsx","./src/pages/mycomplaintspage.tsx","./src/pages/placeholderpage.tsx","./src/pages/reportissuepage.tsx","./src/pages/studentacademicspage.tsx","./src/pages/studentdashboard.tsx","./src/pages/studentprofilepage.tsx","./src/types/index.ts","./src/utils/searchdeeplink.ts"],"version":"5.9.3"}
+[Internal / Technical Identifier] frontend\src\App.tsx:7 ->  import { VignexIntroScreen } from './components/common/VignexIntroScreen';
+[Internal / Technical Identifier] frontend\src\App.tsx:28 ->  import AskVignexPage from './pages/AskVignexPage';
+[Internal / Technical Identifier] frontend\src\App.tsx:42 ->  return !sessionStorage.getItem('vignex_intro_completed');
+[Internal / Technical Identifier] frontend\src\App.tsx:46 ->  sessionStorage.setItem('vignex_intro_completed', 'true');
+[Internal / Technical Identifier] frontend\src\App.tsx:52 ->  {showIntro && <VignexIntroScreen onComplete={handleIntroComplete} />}
+[Internal / Technical Identifier] frontend\src\App.tsx:62 ->  <Route path="/student/ask-vignex" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:63 ->  <Route path="/student/ask-vignai" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:74 ->  <Route path="/faculty/ask-vignex" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:75 ->  <Route path="/faculty/ask-vignai" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:131 ->  <Route path="/management/ask-vignex" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:132 ->  <Route path="/management/ask-vignai" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:147 ->  <Route path="/ask-vignex" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\App.tsx:148 ->  <Route path="/ask-vignai" element={<AskVignexPage />} />
+[Internal / Technical Identifier] frontend\src\index.css:84 ->  /* VIGNEX Global Search Target Spotlight */
+[Internal / Technical Identifier] frontend\src\index.css:85 ->  @keyframes vignex-spotlight-pulse {
+[Internal / Technical Identifier] frontend\src\index.css:100 ->  .vignex-spotlight-active {
+[Internal / Technical Identifier] frontend\src\index.css:103 ->  animation: vignex-spotlight-pulse 1.6s ease-in-out infinite;
+[Internal / Technical Identifier] frontend\src\index.css:109 ->  .vignex-spotlight-active {
+[Internal / Technical Identifier] frontend\src\api\client.ts:9 ->  const token = localStorage.getItem('vignex_token');
+[Internal / Technical Identifier] frontend\src\api\client.ts:22 ->  localStorage.removeItem('vignex_token');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:20 ->  const stored = localStorage.getItem('vignex_user');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:26 ->  const [token, setToken] = useState<string | null>(() => localStorage.getItem('vignex_token'));
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:32 ->  const storedToken = localStorage.getItem('vignex_token');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:41 ->  localStorage.setItem('vignex_user', JSON.stringify(validUser));
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:43 ->  localStorage.removeItem('vignex_token');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:44 ->  localStorage.removeItem('vignex_user');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:49 ->  localStorage.removeItem('vignex_user');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:63 ->  localStorage.setItem('vignex_token', access_token);
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:64 ->  localStorage.setItem('vignex_user', JSON.stringify(loggedInUser));
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:73 ->  localStorage.removeItem('vignex_token');
+[Internal / Technical Identifier] frontend\src\auth\AuthContext.tsx:74 ->  localStorage.removeItem('vignex_user');
+[Internal / Technical Identifier] frontend\src\context\ThemeContext.tsx:17 ->  const STORAGE_KEY = 'vignex_theme';
+[Internal / Technical Identifier] frontend\src\utils\searchDeepLink.ts:2 ->  * VIGNEX Global Search Deep-Linking & Spotlight Utility
+[Internal / Technical Identifier] frontend\src\utils\searchDeepLink.ts:14 ->  * Triggers the VIGNEX Spotlight highlight on a DOM element by ID.
+[Internal / Technical Identifier] frontend\src\utils\searchDeepLink.ts:45 ->  el.classList.add('vignex-spotlight-active');
+[Internal / Technical Identifier] frontend\src\utils\searchDeepLink.ts:49 ->  el.classList.remove('vignex-spotlight-active');
+[Internal / Technical Identifier] frontend\src\utils\searchDeepLink.ts:55 ->  console.warn(`[VIGNEX Search] Target element #${cleanId} not found within ${maxWaitMs}ms`);

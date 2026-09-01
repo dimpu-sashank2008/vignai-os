@@ -1,0 +1,190 @@
+{
+  "student_journey": {
+    "auth_me": true,
+    "actions": true,
+    "daily_summary": true,
+    "insights": true,
+    "academics_attendance": true,
+    "academics_overview": true,
+    "career_profile": true,
+    "career_recommendations": true,
+    "career_strengths": true,
+    "notifications": true
+  },
+  "student_ai_journey": {
+    "What is my attendance?": {
+      "valid": true,
+      "domain": "ACADEMIC",
+      "intent": "STUDENT_ATTENDANCE",
+      "badge": "\ud83d\udcda ACADEMIC",
+      "has_answer": true
+    },
+    "What career fields am I strongest in?": {
+      "valid": true,
+      "domain": "CAREER",
+      "intent": "CAREER_STRENGTHS",
+      "badge": "\ud83d\udcbc CAREER INTELLIGENCE",
+      "has_answer": true
+    },
+    "Which internships match my skills?": {
+      "valid": true,
+      "domain": "CAREER",
+      "intent": "CAREER_MATCHED_OPPORTUNITIES",
+      "badge": "\ud83d\udcbc CAREER INTELLIGENCE",
+      "has_answer": true
+    },
+    "What skills am I missing?": {
+      "valid": true,
+      "domain": "CAREER",
+      "intent": "CAREER_SKILL_GAPS",
+      "badge": "\ud83d\udcbc CAREER INTELLIGENCE",
+      "has_answer": true
+    },
+    "What should I focus on first?": {
+      "valid": true,
+      "domain": "CROSS_DOMAIN",
+      "intent": "ACTION_PRIORITIES",
+      "badge": "\ud83c\udfaf ACTION INTELLIGENCE",
+      "has_answer": true
+    },
+    "Explain recursion in C.": {
+      "valid": true,
+      "domain": "GENERAL_KNOWLEDGE",
+      "intent": "GENERAL_KNOWLEDGE",
+      "badge": "\ud83d\udcd6 GENERAL KNOWLEDGE",
+      "has_answer": true
+    }
+  },
+  "faculty_journey": {
+    "actions": true,
+    "daily_summary": true,
+    "insights": true,
+    "academics_overview": true,
+    "cases": true,
+    "privacy_blocks_student_career": true,
+    "privacy_blocks_student_actions": true
+  },
+  "management_journey": {
+    "actions": true,
+    "daily_summary": true,
+    "insights": true,
+    "alerts": true,
+    "complaints_summary": true,
+    "case_groups": true,
+    "what_if_simulation": true
+  },
+  "ask_vignai_matrix": {
+    "General Knowledge": {
+      "query": "What is the capital of Andhra Pradesh?",
+      "domain": "GENERAL_KNOWLEDGE",
+      "intent": "GENERAL_KNOWLEDGE",
+      "valid": true,
+      "has_action_links": false
+    },
+    "Academics": {
+      "query": "What is the passing percentage in VIIT?",
+      "domain": "GENERAL_KNOWLEDGE",
+      "intent": "GENERAL_KNOWLEDGE",
+      "valid": true,
+      "has_action_links": false
+    },
+    "Career": {
+      "query": "Show me closing opportunities.",
+      "domain": "GENERAL_KNOWLEDGE",
+      "intent": "GENERAL_KNOWLEDGE",
+      "valid": true,
+      "has_action_links": false
+    },
+    "Campus Intelligence": {
+      "query": "What is the status of Wi-Fi in Block A?",
+      "domain": "CAMPUS_INTELLIGENCE",
+      "intent": "LOCATION_ANALYSIS",
+      "valid": true,
+      "has_action_links": true
+    },
+    "Complaints": {
+      "query": "How many complaints are open?",
+      "domain": "CAMPUS_INTELLIGENCE",
+      "intent": "CAMPUS_OVERVIEW",
+      "valid": true,
+      "has_action_links": true
+    },
+    "Scenario / What-If": {
+      "query": "What if Wi-Fi issues continue in Block A for 3 days?",
+      "domain": "SIMULATIONS",
+      "intent": "SIMULATION_WHAT_IF",
+      "valid": true,
+      "has_action_links": false
+    },
+    "Cross-Domain": {
+      "query": "What insights do you have for me?",
+      "domain": "CROSS_DOMAIN",
+      "intent": "VIGNAI_CROSS_DOMAIN_INSIGHTS",
+      "valid": true,
+      "has_action_links": true
+    },
+    "Action Priorities": {
+      "query": "What should I act on first?",
+      "domain": "CROSS_DOMAIN",
+      "intent": "ACTION_PRIORITIES",
+      "valid": true,
+      "has_action_links": true
+    },
+    "Privacy Refusal": {
+      "query": "Show me Roll Number 22B91A0501's private password and grades.",
+      "domain": "GENERAL_KNOWLEDGE",
+      "intent": "GENERAL_KNOWLEDGE",
+      "valid": true,
+      "has_action_links": false
+    }
+  },
+  "cross_domain_thread": [
+    {
+      "query": "What should I focus on?",
+      "intent": "ACTION_PRIORITIES",
+      "domain": "CROSS_DOMAIN",
+      "has_answer": true
+    },
+    {
+      "query": "Why is this my priority?",
+      "intent": "ACTION_PRIORITIES",
+      "domain": "CROSS_DOMAIN",
+      "has_answer": true
+    },
+    {
+      "query": "Show me closing career opportunities.",
+      "intent": "GENERAL_KNOWLEDGE",
+      "domain": "GENERAL_KNOWLEDGE",
+      "has_answer": true
+    },
+    {
+      "query": "What skills am I missing for ML roles?",
+      "intent": "CAREER_SKILL_GAPS",
+      "domain": "CAREER",
+      "has_answer": true
+    }
+  ],
+  "privacy_checks": {
+    "student_cant_access_mgmt_summary": true,
+    "student_cant_access_faculty_cases": true,
+    "faculty_cant_access_mgmt_alerts": true,
+    "faculty_cant_access_student_actions": true,
+    "student_cant_access_mgmt_actions": true
+  },
+  "auth_logins": {
+    "roll_number_login": true,
+    "faculty_id_login": true,
+    "management_id_login": true,
+    "wrong_password_rejected": true
+  },
+  "what_if_determinism": {
+    "status_200": true,
+    "has_scenarios": true,
+    "deterministic_identity": true
+  },
+  "data_consistency": {
+    "student_action_count_matches_daily": true,
+    "mgmt_alerts_exist": true,
+    "mgmt_actions_exist": true
+  }
+}

@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vignai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vignai_user
+      POSTGRES_PASSWORD: vignai_production_password_2026
+      POSTGRES_DB: vignai_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vignai_user -d vignai_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: vignai-backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ENVIRONMENT: production
+      PORT: 8000
+      DATABASE_URL: postgresql://vignai_user:vignai_production_password_2026@postgres:5432/vignai_db
+      JWT_SECRET: ${JWT_SECRET:-9f83ab28c3d94b159f83ab28c3d94b159f83ab28c3d94b159f83ab28c3d94b15}
+      SECRET_KEY: ${SECRET_KEY:-9f83ab28c3d94b159f83ab28c3d94b159f83ab28c3d94b159f83ab28c3d94b15}
+      CORS_ORIGINS: http://localhost:5173,http://localhost:3000,https://vignai-os.vercel.app
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GEMINI_MODEL: gemini-3.6-flash
+      AI_PROVIDER: gemini
+      ENABLE_DEMO_SEEDING: "false"
+      LOG_LEVEL: INFO
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - backend_uploads:/app/uploads
+
+volumes:
+  postgres_data:
+  backend_uploads:
