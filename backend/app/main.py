@@ -7,7 +7,13 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
-from app.database import engine, Base, run_db_migrations, check_database_connection
+from app.database import (
+    engine,
+    Base,
+    check_database_connection,
+    verify_database_schema,
+    safe_initialize_database,
+)
 from app.routers import (
     health,
     auth,
@@ -40,16 +46,19 @@ async def lifespan(app: FastAPI):
     logger.info("Initializing VIGNAI OS in environment: %s", settings.ENVIRONMENT)
     settings.validate_production_readiness()
 
-    # 2. Database Schema & Migrations
+    # 2. Database Connectivity & Safe Multi-Worker Schema Verification
     logger.info("Verifying database connectivity...")
     if not check_database_connection():
         logger.warning("Database connection ping failed on startup; will retry on incoming requests.")
     else:
         logger.info("Database connection established.")
 
-    Base.metadata.create_all(bind=engine)
-    run_db_migrations()
-    logger.info("Database schema and migrations verified.")
+    if verify_database_schema():
+        logger.info("Database schema and migrations verified (tables present). Skipping redundant worker DDL.")
+    else:
+        logger.info("Database schema missing or incomplete. Initializing safely across workers...")
+        safe_initialize_database()
+        logger.info("Database schema and migrations verified.")
 
     # 3. Optional Demo Seeding
     if settings.ENABLE_DEMO_SEEDING:
