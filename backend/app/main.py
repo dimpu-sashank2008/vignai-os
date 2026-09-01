@@ -62,12 +62,22 @@ async def lifespan(app: FastAPI):
 
     # 3. Optional Demo Seeding
     if settings.ENABLE_DEMO_SEEDING:
-        logger.info("ENABLE_DEMO_SEEDING is active. Running demo seed...")
+        from app.database import SessionLocal
+        from app.models.user import User
+        db = SessionLocal()
         try:
-            from app.seed import run_seed
-            run_seed()
+            user_count = db.query(User).count()
+            if user_count == 0:
+                logger.info("ENABLE_DEMO_SEEDING is active and database is unseeded. Running demo seed...")
+                from app.seed import run_seed
+                run_seed()
+                logger.info("Demo seeding completed.")
+            else:
+                logger.info("ENABLE_DEMO_SEEDING is active, but %d user(s) already exist. Skipping redundant seed.", user_count)
         except Exception as seed_err:
-            logger.error("Demo seeding error: %s", seed_err, exc_info=True)
+            logger.error("Demo seeding check error: %s", seed_err, exc_info=True)
+        finally:
+            db.close()
 
     yield
 

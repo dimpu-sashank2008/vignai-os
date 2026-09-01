@@ -1,6 +1,6 @@
 import asyncio
 from datetime import date, datetime, timedelta
-from app.database import engine, Base, SessionLocal, run_db_migrations
+from app.database import engine, Base, SessionLocal, safe_initialize_database
 from app.models.user import User
 from app.models.department import Department
 from app.models.student import StudentProfile
@@ -22,8 +22,7 @@ from app.services.ai.complaint_ai import complaint_ai_service
 from app.services.ai.policy.rules import CONFIGURED_DEPARTMENTS
 
 def run_seed():
-    Base.metadata.create_all(bind=engine)
-    run_db_migrations()
+    safe_initialize_database()
     db = SessionLocal()
     try:
         print("Creating seed data...")

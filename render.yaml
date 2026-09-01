@@ -5,7 +5,7 @@ services:
     runtime: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    preDeployCommand: python -m app.db_init
+    preDeployCommand: python -m app.db_init --seed
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 2
     envVars:
       - key: ENVIRONMENT
@@ -25,7 +25,7 @@ services:
       - key: AI_PROVIDER
         value: gemini
       - key: ENABLE_DEMO_SEEDING
-        value: "false"
+        value: "true"
       - key: LOG_LEVEL
         value: INFO
     healthCheckPath: /health
