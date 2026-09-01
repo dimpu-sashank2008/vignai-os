@@ -60,24 +60,24 @@ async def lifespan(app: FastAPI):
         safe_initialize_database()
         logger.info("Database schema and migrations verified.")
 
-    # 3. Optional Demo Seeding
-    if settings.ENABLE_DEMO_SEEDING:
-        from app.database import SessionLocal
-        from app.models.user import User
-        db = SessionLocal()
-        try:
-            user_count = db.query(User).count()
+    # 3. Demo Seeding Check
+    from app.database import SessionLocal
+    from app.models.user import User
+    db = SessionLocal()
+    try:
+        user_count = db.query(User).count()
+        if user_count == 0 or settings.ENABLE_DEMO_SEEDING:
             if user_count == 0:
-                logger.info("ENABLE_DEMO_SEEDING is active and database is unseeded. Running demo seed...")
+                logger.info("Database has 0 users. Initializing default accounts via official seed pipeline...")
                 from app.seed import run_seed
                 run_seed()
-                logger.info("Demo seeding completed.")
+                logger.info("Default demo accounts seeded successfully.")
             else:
-                logger.info("ENABLE_DEMO_SEEDING is active, but %d user(s) already exist. Skipping redundant seed.", user_count)
-        except Exception as seed_err:
-            logger.error("Demo seeding check error: %s", seed_err, exc_info=True)
-        finally:
-            db.close()
+                logger.info("Database already populated with %d users. Skipping redundant seed.", user_count)
+    except Exception as seed_err:
+        logger.error("Demo seeding check error: %s", seed_err, exc_info=True)
+    finally:
+        db.close()
 
     yield
 
