@@ -3,10 +3,10 @@ from datetime import datetime
 from typing import Any, Optional
 
 class AlertReasonData(BaseModel):
-    priority: str
-    related_case_count: int
-    trend: str
-    unresolved_duration_days: int
+    priority: str = "NORMAL"
+    related_case_count: int = 0
+    trend: str = "STABLE"
+    unresolved_duration_days: int = 0
     location: Optional[str] = None
     category: Optional[str] = None
     department: Optional[str] = None
